@@ -21,9 +21,8 @@ pipeline {
         }
         stage('Archive the Package') {
             steps {
-                archiveArtifacts onlyIfSuccessful: true,
-                                artifacts: '**/target/spring-petclinic-*.jar',
-                                allowEmptyArchive: false
+                archiveArtifacts artifacts: '**/target/spring-petclinic-3.0.0-SNAPSHOT.jar',
+                                onlyIfSuccessful: true
             }
         }
         stage('Publish the Test Results') {
