@@ -40,7 +40,7 @@ pipeline {
                 body: "Refer Here ${BUILD_URL} for more details. Build is Successful"
         }
         failure {
-            mail to: "${GIT_AUTHOR_EMAIL}",
+            mail to: "tanya@acc.in",
                 from: 'tqdevops@qt.com',
                 subject: "Jenkins build status of ${JOB_NAME} with id ${BUILD_ID}",
                 body: "Refer Here ${BUILD_URL} for more details. Build has Failed"
